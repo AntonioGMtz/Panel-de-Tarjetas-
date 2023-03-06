@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarjetas</title>
+    <title>Panel de tarjetas</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body class="bg-dark">
     <div class="row">
@@ -17,6 +18,7 @@
                         <div class="col-12">
                           <img src="https://thumbs.dreamstime.com/b/logo-de-adidas-s%C3%ADmbolo-rojo-dise%C3%B1o-icono-pantalla-f%C3%BAtbol-abstracto-ropa-vector-ilustraci%C3%B3n-con-fondo-blanco-253453227.jpg" class="ms-4" style="width: 50px;" alt="Logotipo">
                         </div>
+                        <!-- Aqui inician las tarjetas Panel izq -->
                         <div class="row mt-3 mb-3 d-flex justify-content-center">
                             <div class="col-5">
                               <div class="card h-100">
@@ -36,10 +38,60 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 shadow bg-white"><br><br><br><br><br></div>
+                    <div class="col-4 shadow bg-white pb-5">
+                      <!-- Panel derecho -->
+                      <div class="row mt-2"></div>
+                      <div class="row mt-5">
+                        <div class="col-1"></div><div class="col-5 text-body-tertiary">Total size</div><div class="col-5">5.4 Mb</div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-1"></div><div class="col-5 text-body-tertiary">Created</div><div class="col-5">10/01/2021</div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-1"></div><div class="col-5 text-body-tertiary">Modified</div><div class="col-5">06/06/2021</div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-1"></div><div class="col-5 text-body-tertiary">Location</div><div class="col-5"><i class="fas fa-folder fs-5 text-primary-emphasis"></i> Home</div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-1"></div><div class="col-5 text-body-tertiary">Status</div><div class="col-5"><img src="assets/" class="circle-orange"> Review  <i class="text-body-tertiary">&nbsp;&nbsp;▼</i></div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-1"></div><div class="col-5 text-body-tertiary">Tags</div><div class="col-5"></div>
+                      </div>
+                      <div class="row mt-2">
+                        <div class="col-1"></div>
+                        <div class="col-11">
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-1">New <img src="assets/img/circle-xmark-solid.png" width="15px"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-1">2021 <img src="assets/img/circle-xmark-solid.png" width="15px"></span>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                          <input type="text" class="form-control" id="bucar" placeholder="Buscar">
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                          <div class="card shadow bg-white">
+                            <div class="card-body">
+                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-">+ Import</span><br>
+                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-">+ Important</span><br>
+                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-">+ Impossible</span><br>
+                              <hr>
+                              <span class="text-primary-emphasis fs-6"><small>CREATE NEW:</small></span>&nbsp;&nbsp;
+                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-">+ Imp</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
         <div class="col-2"></div>
     </div>
 </body>
+<script src="assets/js/main.js"></script>
 </html>

@@ -1,3 +1,21 @@
+body{
+    margin: auto;
+}
 .bg-col1{
-    background-color: #fafbfd;
+    background-color: #F5FAFE;
+}
+.circle-orange{
+    color: #F99D3F;
+    background-color: #F99D3F;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+}
+.circle-gray{
+    color: #fff;
+    background-color: #7c7c7c;
+    border-radius: 50%;
+    width: 15px !important;
+    height: 10px !important;
+    padding: 3px;
 }
