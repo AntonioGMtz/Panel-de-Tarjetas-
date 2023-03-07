@@ -11,11 +11,17 @@ body{
     width: 7px;
     height: 7px;
 }
-.circle-gray{
-    color: #fff;
-    background-color: #7c7c7c;
+.circle-green{
+    color: #8DD22F;
+    background-color: #8DD22F;
     border-radius: 50%;
-    width: 15px !important;
-    height: 10px !important;
-    padding: 3px;
+    width: 7px !important;
+    height: 7px !important;
+}
+.circle-gray{
+    color: #707070;
+    background-color: #707070;
+    border-radius: 50%;
+    width: 7px !important;
+    height: 7px !important;
 }

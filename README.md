@@ -1,5 +1,7 @@
 # Proyecto de Ingeniería de Software
 # git init
+# git add .
+# git add <Archivo>
 # git status
 # git diff
 # git commit -m "Version1"
