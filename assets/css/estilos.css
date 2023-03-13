@@ -2,7 +2,7 @@ body{
     margin: auto;
 }
 .bg-col1{
-    background-color: #F5FAFE;
+    background-color: #F2FAFD;
 }
 .circle-orange{
     color: #F99D3F;
@@ -24,4 +24,17 @@ body{
     border-radius: 50%;
     width: 7px !important;
     height: 7px !important;
+}
+.text-body-tertiary{
+    color:#CCD4DD !important;
+}
+.text-body-tertiary2{
+    color:#A7B6C5 !important;
+}
+.text-primary-emphasis{
+    color: #023F81 !important;
+    font-weight: bold !important;
+}
+.card{
+    border-radius: 10px !important;
 }
