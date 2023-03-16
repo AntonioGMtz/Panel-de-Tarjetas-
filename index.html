@@ -317,7 +317,17 @@
                       <div class="row mt-3">
                         <div class="col-1"></div>
                         <div class="col-10">
-                          <input type="text" class="form-control" id="bucar" placeholder="Buscar">
+                          <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+                          <ul id="listaArticulos">
+                            <li class="articulo">New</li>
+                            <li class="articulo">Approved</li>
+                            <li class="articulo">2019</li>
+                            <li class="articulo">2021</li>
+                            <li class="articulo">2020</li>
+                            <li class="articulo">Draft</li>
+                            <li class="articulo">Import</li>
+                        </ul>
+                
                         </div>
                       </div>
                       <div class="row mt-3">
@@ -325,9 +335,9 @@
                         <div class="col-10">
                           <div class="card shadow bg-white">
                             <div class="card-body">
-                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-">+ Import</span><br>
-                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-">+ Important</span><br>
-                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-">+ Impossible</span><br>
+                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-articulo">+ Import</span><br>
+                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-articulo">+ Important</span><br>
+                              <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-articulo">+ Impossible</span><br>
                               <hr>
                               <span class="text-primary-emphasis fs-6"><small>CREATE NEW:</small></span>&nbsp;&nbsp;
                               <span class="badge rounded-pill bg-col1 text-body-tertiary shadow-sm ms-">+ Imp</span>
@@ -343,4 +353,5 @@
     </div>
 </body>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/buscar.js"></script>
 </html>

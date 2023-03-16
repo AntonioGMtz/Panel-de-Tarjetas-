@@ -25,3 +25,6 @@ body{
     width: 7px !important;
     height: 7px !important;
 }
+.filtro{
+    display: none;
+}
