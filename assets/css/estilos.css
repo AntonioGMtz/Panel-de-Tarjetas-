@@ -35,6 +35,25 @@ body{
     color: #023F81 !important;
     font-weight: bold !important;
 }
+.-b-text-undexpanded {
+    display: -webkit-box;
+    height: 30.2px;
+    -webkit-line-clamp: 2; /* Número de líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+  }
+  .-b-expander {
+    cursor: pointer;
+    line-height: 1;
+  }
 .card{
     border-radius: 10px !important;
+}
+.block{
+    display: block;
+}
+.filtro{
+    display: none;
 }
