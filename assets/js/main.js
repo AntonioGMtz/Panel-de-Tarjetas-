@@ -60,3 +60,23 @@ document.addEventListener("keyup", e=>{
 });
 
 
+
+function ingresarDatos(){
+    // datos mandados con la solicutud POST
+    var value = document.getElementById('buscador').value;
+let _datos = {
+    
+    name: value, 
+    
+  }
+  
+  fetch('https://64137b96a68505ea7334a07d.mockapi.io/tags', {
+    method: "POST",
+    body: JSON.stringify(_datos),
+    headers: {"Content-type": "application/json; charset=UTF-8"}
+  })
+  .then(response => response.json()) 
+  .then(json => console.log(json));
+}
+
+
