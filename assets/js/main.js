@@ -17,7 +17,7 @@ div9 = document.getElementById('+tag3');
 div10 = document.getElementById('tag7');
 
 
-
+//BUSCADOR letraXletra
 document.addEventListener("keyup", e=>{
     if (e.target.matches("#buscador")){
         if (e.key ==="Escape")e.target.value = ""
@@ -61,6 +61,7 @@ document.addEventListener("keyup", e=>{
 
 
 
+//Agregar datos al JSON
 function ingresarDatos(){
     // datos mandados con la solicutud POST
     var value = document.getElementById('buscador').value;
@@ -79,4 +80,24 @@ let _datos = {
   .then(json => console.log(json));
 }
 
+mytag1 = document.getElementById('chTag');
+mytag2 = document.getElementById('chTag2');
 
+var bandera = true
+check1.addEventListener("change", function(){
+   
+   if(bandera ){
+        mytag1.style.display = '';
+        mytag2.style.display = '';
+        bandera = false
+        
+   }
+   else{
+    mytag1.style.display = 'none';
+    mytag2.style.display = 'none';
+    bandera = true
+   }
+   
+  })
+  
+ 
