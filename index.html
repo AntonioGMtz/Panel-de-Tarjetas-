@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
-<body class="bg-dark">
+<body class="bg-dark" onload="loadImage()" >
     <div class="row">
         <div class="col-2"></div>
             <div class="col-8 bg-body-tertiary">
@@ -34,13 +34,16 @@
                                       <p class="card-text lh-1 -b-expander -b-text-undexpanded">Generic Wooden Mouse</p>
                                       <div class="col text-end tagTarjeta">
                                         <!-- Tags -->
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" >Approved </span>
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" >2019 </span>
+                                          <!-- Tags -->
+                                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id="card1"> </span>
+                                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id="card1-2"></span>
+                                          
+                                        
                                       </div>
                                     </div>
                                     <div class="col-2">
                                       <div class="col form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="check1" >
+                                        <input class="form-check-input" type="checkbox" value="" id="check1" onclick="ingresar();">
                                       </div>
                                       <div class="col">&nbsp;</div>
                                       <div class="col">
@@ -66,13 +69,13 @@
                                       <p class="card-text lh-1 -b-expander -b-text-undexpanded">Unbranded Concrete Cheese</p>
                                       <div class="col text-end tagTarjeta">
                                         <!-- Tags -->
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">New </span>
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">2021 </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card2-1">New </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card2-2">2021 </span>
                                       </div>
                                     </div>
                                     <div class="col-2">
                                       <div class="col form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check2" onclick="ingresar();">
                                       </div>
                                       <div class="col">&nbsp;</div>
                                       <div class="col">
@@ -101,12 +104,13 @@
                                       <p class="card-text lh-1 -b-expander -b-text-undexpanded">Fantastic Granite Computer</p>
                                       <div class="col text-end tagTarjeta">
                                         <!-- Tags -->
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">Draft </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1 "id = "card3-1">Draft </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card3-2"> Approved </span>
                                       </div>
                                     </div>
                                     <div class="col-2">
                                       <div class="col form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check3" onclick="ingresar();">
                                       </div>
                                       <div class="col">&nbsp;</div>
                                       <div class="col">
@@ -132,13 +136,13 @@
                                       <p class="card-text lh-1 -b-expander -b-text-undexpanded">Unbranded Concrete Cheese</p>
                                       <div class="col text-end tagTarjeta">
                                         <!-- Tags -->
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">Approved </span>
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">2020 </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card4-1">Approved </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card4-2">2020 </span>
                                       </div>
                                     </div>
                                     <div class="col-2">
                                       <div class="col form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check4" onclick="ingresar();">
                                       </div>
                                       <div class="col">&nbsp;</div>
                                       <div class="col">
@@ -167,13 +171,13 @@
                                       <p class="card-text lh-1 -b-expander -b-text-undexpanded">Ergonomic Soft Chips</p>
                                       <div class="col text-end tagTarjeta">
                                         <!-- Tags -->
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">New </span>
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">2021 </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card5-1">New </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card5-2">2021 </span>
                                       </div>
                                     </div>
                                     <div class="col-2">
                                       <div class="col form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="check" checked>
+                                        <input class="form-check-input" type="checkbox" value="" id="check5" onclick="ingresar();" >
                                       </div>
                                       <div class="col">&nbsp;</div>
                                       <div class="col">
@@ -199,13 +203,13 @@
                                       <p class="card-text lh-1 -b-expander -b-text-undexpanded">Awsome Fresh Tuna</p>
                                       <div class="col text-end tagTarjeta">
                                         <!-- Tags -->
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">New </span>
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">2019 </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card6-1">New </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card6-2">2019 </span>
                                       </div>
                                     </div>
                                     <div class="col-2">
                                       <div class="col form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check6" onclick="ingresar();">
                                       </div>
                                       <div class="col">&nbsp;</div>
                                       <div class="col">
@@ -233,12 +237,13 @@
                                       <p class="card-text lh-1 -b-expander -b-text-undexpanded">Tasty Concrete Chair</p>
                                       <div class="col text-end tagTarjeta">
                                         <!-- Tags -->
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">Approved </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card7-1"> Approved </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card7-2"> </span>
                                       </div>
                                     </div>
                                     <div class="col-2">
                                       <div class="col form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check7" onclick="ingresar7();">
                                       </div>
                                       <div class="col">&nbsp;</div>
                                       <div class="col">
@@ -261,16 +266,16 @@
                                       <div class="col"><i class="fas fa-star"></i></div>
                                     </div>
                                     <div class="col-8">
-                                      <p class="card-text lh-1 -b-expander -b-text-undexpanded">Refined Wooden Towels kjhakjdhf akhjdfkajhf kjahsdfkhjas dfga7iqgfkasef hdfb kaldf kajn</p>
+                                      <p class="card-text lh-1 -b-expander -b-text-undexpanded">Refined Wooden Towels</p>
                                       <div class="col text-end tagTarjeta">
                                         <!-- Tags -->
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">Draft </span>
-                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1">Import </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1" id = "card8-1">Draft </span>
+                                        <span class="badge rounded-pill bg-col1 text-body-tertiary2 me-1 " id = "card8-2">Import </span>
                                       </div>
                                     </div>
                                     <div class="col-2">
                                       <div class="col form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check8" onclick="ingresar();">
                                       </div>
                                       <div class="col">&nbsp;</div>
                                       <div class="col">
@@ -310,10 +315,26 @@
                       <div class="row mt-2">
                         <div class="col-1"></div>
                         <div class="col-11" id="Tags">
-                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1">New <img src="assets/img/circle-xmark-solid.png" width="15px"></span>
-                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1">2021 <img src="assets/img/circle-xmark-solid.png" width="15px"></span>
-                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" style="display:none;" id = "chTag">Approved <img src="assets/img/circle-xmark-solid.png" width="15px"></span>
-                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" style="display:none;" id = "chTag2">2019 <img src="assets/img/circle-xmark-solid.png" width="15px"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt1" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt2" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt3" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt4" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt5" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt6" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt7" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt8" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt9" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt10" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt11" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt12" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt13" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt14" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt15" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt16"  style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt17" style="visibility:hidden;" ><img src="assets/img/circle-xmark-solid.png" width="15px" style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt18" style="visibility:hidden;"><img src="assets/img/circle-xmark-solid.png" width="15px"  style="display:none;"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1" id = "dt19"style="visibility:hidden;" >Approved <img src="assets/img/circle-xmark-solid.png" width="15px"></span>
+                          <span class="badge rounded-pill bg-col1 text-body-tertiary2 ms-1"  id = "dt20" style="visibility:hidden;" >2019 <img src="assets/img/circle-xmark-solid.png" width="15px"></span>
                         </div>
                       </div>
                       <div class="row mt-3">
@@ -327,42 +348,12 @@
                         <div class="col-10">
                           <div class="card shadow bg-white border-0">
                             <div class="card-body"  >
-                              <span id="listaArticulos" >
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2" id = "+tag1" >+ Import</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2" id = "+tag2"  >+ Important</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2" id = "+tag3">+ Impossible</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2"  style="display:none;" id = "tag1"> New</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2"  style="display:none;" id = "tag2"> Approved</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2"  style="display:none;" id = "tag3"> 2021</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2"  style="display:none;" id = "tag4"> 2020</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2"  style="display:none;" id = "tag5"> 2019</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2"  style="display:none;" id = "tag6">Draft</span>
-                                </span>
-                                <span class="articulo block">
-                                  <span class="badge rounded-pill bg-col1 text-body-tertiary2"  style="display:none;" id = "tag7">Import</span>
-                                </span>
-                               
+                              <span id="listaTags">
+                                <!-- Aquí carga datos la API -->
                               </span>
                               <hr>
                               <div class="col text-center">
-                                <button type="button" class="btn btn-light" type="submit" id="boton_terminar" onclick="ingresarDatos();" class="text-primary-emphasis fs-6" >Create New</button><small></small>&nbsp;&nbsp;
+                                <button type="submit" id="boton_terminar" onclick="ingresarDatos();" class="btn btn-light" >CREATE NEW: </button><small></small>&nbsp;&nbsp;
                                 <span class="badge rounded-pill bg-col1 text-body-tertiary2" id="newTag">+ Imp</span>
                               </div>
                             </div>
@@ -378,5 +369,4 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-</html>
+</html>                         
