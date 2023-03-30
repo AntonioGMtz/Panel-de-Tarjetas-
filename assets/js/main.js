@@ -65,6 +65,14 @@ if(document.getElementById('check8').checked){
 
 }
 
+function ingresar(idTagAdd,tagName){
+  if(document.getElementById('check1').checked){
+    $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id='" + tagName + idTagAdd + "'>" + tagName + " <img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;' onClick='javascript: tagRemoveTags(" + idTagAdd + ",\"" + tagName + "\")'></span>");
+
+
+  }
+}
+
 // Función para eliminar tag de la sección Tags en Panel Derecho
 function tagRemoveTags(idTagAdd,tagName){
 $("#" + tagName + idTagAdd).remove();
@@ -89,7 +97,7 @@ $("#buscador").focus( cargaAjax );
 $("#buscador").focusout( cargaAjax );
 $( window ).on( "load", cargaAjax );
 function cargaAjax() {
-  
+    
   $.ajax({
    type: "GET",
    url: "https://64137b96a68505ea7334a07d.mockapi.io/tags",
@@ -110,6 +118,57 @@ function cargaAjax() {
     alert(data.responseText);
    }
   });
+}
+
+// Función para leer tags de la API en la tarjeta 
+
+function cargaAj() {
+  
+  $.ajax({
+   type: "GET",
+   url: "https://64137b96a68505ea7334a07d.mockapi.io/tags",
+   contentType: "application/json; charset=utf-8",
+   dataType: "json",
+   
+   success: function (data) {
+    var num1 = Math.round(Math.random() * 9);
+    var num2 = Math.round(Math.random() * 9);
+    $('#Card1Tags').empty();
+    $.each(data, function (i, item) {
+      if(num1 == i){
+        var rows = "<span class='badge rounded-pill bg-col1 text-body-tertiary2' id = 'span1'>" +   item.name + "</span>";
+      }
+      if(num2 == i){
+        var rows = "<span class='badge rounded-pill bg-col1 text-body-tertiary2' id = 'span1'>" +   item.name + "</span>";
+      }
+      
+      $('#Card1Tags').append(rows);
+    });
+   },
+   failure: function (data) {
+    alert(data.responseText);
+   },
+   error: function (data) {
+    alert(data.responseText);
+   }
+  });
+}
+
+function obtenerTextoDerecho1() {
+  var checkbox = document.getElementById("check1");
+  if (checkbox.checked == true) {
+    var spans = document.querySelectorAll('#span1');
+    spans.forEach(function(span) {
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan1'>" + span.textContent + "</span>");
+      });  
+  }
+  else{
+    var spans = document.querySelectorAll('#tagspan1');
+    spans.forEach(function(span) {
+      span.remove();
+      }); 
+  }
+
 }
 
 
@@ -152,3 +211,28 @@ check1.addEventListener("change", function(){
  }
  
 });
+
+//Llenar los datos aelatorios de la app
+
+function loadImage() {
+  cont = 0;
+  fetch('https://64137b96a68505ea7334a07d.mockapi.io/tags')
+  .then(res => res.json())
+  .then(datos => {
+      for(let i of datos){
+          console.log(i.name);
+          if(i.name == "Approved"){
+            var text = document.createTextNode(i.name);
+            
+          document.getElementById("card1").appendChild(text);
+          }
+          if(i.name == "2019"){
+            var text = document.createTextNode(i.name);
+            document.getElementById("card1-2").appendChild(text);
+          }
+      }
+  });
+    
+  
+  
+  }
