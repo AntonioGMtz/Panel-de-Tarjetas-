@@ -364,13 +364,16 @@ function cargaAj8() {
 }
 
 function obtenerTextoDerecho1() {
+  
   var checkbox = document.getElementById("check1");
-
+ 
   if (checkbox.checked == true) {
     var spans = document.querySelectorAll('#span1');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan1'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
-      });  
+      if(compararTags(span.textContent) == false){
+        $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan1'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
+      }
+        });  
   }
   else{
     var spans = document.querySelectorAll('#tagspan1');
@@ -379,15 +382,38 @@ function obtenerTextoDerecho1() {
       }); 
   }
 
-
 }
+var valores = [];
+//funcion para comparar spans
+function compararTags(textospan){
+  const div = document.getElementById('Tags'); // Selecciona el elemento div por su ID
+  const spans = div.querySelectorAll('span'); // Se
+  var myflag = false;
+  valores.length = 0;
+  spans.forEach(span => {
+    valores.push(span.textContent); // Agrega el valor de cada span al array "valores"
+  });
+  valores.forEach(elemento => {
+   if(elemento == textospan){
+      myflag = true; 
+    } 
+  });
+  console.log(valores);
+  return myflag;  
+}
+
+
 function obtenerTextoDerecho2(){
+
   var checkbox2 = document.getElementById("check2");
+
   if (checkbox2.checked == true) {
     var spans = document.querySelectorAll('#span2');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan2'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
-      });  
+      if(compararTags(span.textContent) == false){
+        $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan2'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
+      }
+        });  
   }
   else{
     var spans = document.querySelectorAll('#tagspan2');
@@ -397,12 +423,16 @@ function obtenerTextoDerecho2(){
   }
 }
 function obtenerTextoDerecho3(){
+
   var checkbox3 = document.getElementById("check3");
+ 
   if (checkbox3.checked == true) {
     var spans = document.querySelectorAll('#span3');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan3'>" + span.textContent + "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
-      });  
+      if(compararTags(span.textContent) == false){
+        $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan3'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
+      }
+        });  
   }
   else{
     var spans = document.querySelectorAll('#tagspan3');
@@ -413,11 +443,14 @@ function obtenerTextoDerecho3(){
 }
 function obtenerTextoDerecho4(){
   var checkbox4 = document.getElementById("check4");
+  
   if (checkbox4.checked == true) {
     var spans = document.querySelectorAll('#span4');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan4'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
-      });  
+      if(compararTags(span.textContent) == false){
+        $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan4'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
+      }
+        });  
   }
   else{
     var spans = document.querySelectorAll('#tagspan4');
@@ -431,8 +464,10 @@ function obtenerTextoDerecho5(){
   if (checkbox5.checked == true) {
     var spans = document.querySelectorAll('#span5');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan5'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
-      });  
+      if(compararTags(span.textContent) == false){
+        $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan5'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
+      }
+        });  
   }
   else{
     var spans = document.querySelectorAll('#tagspan5');
@@ -442,12 +477,15 @@ function obtenerTextoDerecho5(){
   }
 }
 function obtenerTextoDerecho6(){
+  compararTags()
   var checkbox6 = document.getElementById("check6");
   if (checkbox6.checked == true) {
     var spans = document.querySelectorAll('#span6');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan6'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
-      });  
+      if(compararTags(span.textContent) == false){
+        $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan6'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
+      }
+        });  
   }
   else{
     var spans = document.querySelectorAll('#tagspan6');
@@ -457,12 +495,15 @@ function obtenerTextoDerecho6(){
   }
 }
 function obtenerTextoDerecho7(){
+ 
   var checkbox7 = document.getElementById("check7");
   if (checkbox7.checked == true) {
     var spans = document.querySelectorAll('#span7');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan7'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
-      });  
+      if(compararTags(span.textContent) == false){
+        $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan7'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
+      }
+        });  
   }
   else{
     var spans = document.querySelectorAll('#tagspan7');
@@ -472,12 +513,14 @@ function obtenerTextoDerecho7(){
   }
 }
 function obtenerTextoDerecho8(){
-  var checkbox6 = document.getElementById("check8");
-  if (checkbox6.checked == true) {
+  var checkbox8 = document.getElementById("check8");
+  if (checkbox8.checked == true) {
     var spans = document.querySelectorAll('#span8');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan8'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
-      });  
+      if(compararTags(span.textContent) == false){
+        $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan8'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
+      }
+        });  
   }
   else{
     var spans = document.querySelectorAll('#tagspan8');
