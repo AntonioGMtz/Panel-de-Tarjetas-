@@ -366,16 +366,10 @@ function cargaAj8() {
 function obtenerTextoDerecho1() {
   var checkbox = document.getElementById("check1");
 
-  var checkbox3 = document.getElementById("check3");
-  var checkbox4 = document.getElementById("check4");
-  var checkbox5 = document.getElementById("check5");
-  var checkbox6 = document.getElementById("check6");
-  var checkbox7 = document.getElementById("check7");
-  var checkbox8 = document.getElementById("check8");
   if (checkbox.checked == true) {
     var spans = document.querySelectorAll('#span1');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan1'>" + span.textContent + "</span>");
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan1'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
       });  
   }
   else{
@@ -392,7 +386,7 @@ function obtenerTextoDerecho2(){
   if (checkbox2.checked == true) {
     var spans = document.querySelectorAll('#span2');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan2'>" + span.textContent + "</span>");
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan2'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
       });  
   }
   else{
@@ -407,7 +401,7 @@ function obtenerTextoDerecho3(){
   if (checkbox3.checked == true) {
     var spans = document.querySelectorAll('#span3');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan3'>" + span.textContent + "</span>");
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan3'>" + span.textContent + "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
       });  
   }
   else{
@@ -422,7 +416,7 @@ function obtenerTextoDerecho4(){
   if (checkbox4.checked == true) {
     var spans = document.querySelectorAll('#span4');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan4'>" + span.textContent + "</span>");
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan4'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
       });  
   }
   else{
@@ -437,7 +431,7 @@ function obtenerTextoDerecho5(){
   if (checkbox5.checked == true) {
     var spans = document.querySelectorAll('#span5');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan5'>" + span.textContent + "</span>");
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan5'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
       });  
   }
   else{
@@ -452,7 +446,7 @@ function obtenerTextoDerecho6(){
   if (checkbox6.checked == true) {
     var spans = document.querySelectorAll('#span6');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan6'>" + span.textContent + "</span>");
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan6'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
       });  
   }
   else{
@@ -467,7 +461,7 @@ function obtenerTextoDerecho7(){
   if (checkbox7.checked == true) {
     var spans = document.querySelectorAll('#span7');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan7'>" + span.textContent + "</span>");
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan7'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
       });  
   }
   else{
@@ -482,7 +476,7 @@ function obtenerTextoDerecho8(){
   if (checkbox6.checked == true) {
     var spans = document.querySelectorAll('#span8');
     spans.forEach(function(span) {
-      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan8'>" + span.textContent + "</span>");
+      $("#Tags").append("<span class='badge rounded-pill bg-col1 text-body-tertiary2 ms-1' id ='tagspan8'>" + span.textContent +  "<img src='assets/img/circle-xmark-solid.png' width='15px' style='cursor: pointer;'></span>");
       });  
   }
   else{
@@ -516,25 +510,6 @@ fetch('https://64137b96a68505ea7334a07d.mockapi.io/tags', {
 .then(json => console.log(json));
 }
 
-mytag1 = document.getElementById('chTag');
-mytag2 = document.getElementById('chTag2');
-
-var bandera = true
-check1.addEventListener("change", function(){
- 
- if(bandera ){
-      mytag1.style.display = '';
-      mytag2.style.display = '';
-      bandera = false
-      
- }
- else{
-  mytag1.style.display = 'none';
-  mytag2.style.display = 'none';
-  bandera = true
- }
- 
-});
 
 //Llenar los datos aelatorios de la app
 
